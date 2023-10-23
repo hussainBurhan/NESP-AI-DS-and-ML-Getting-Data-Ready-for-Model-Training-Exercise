@@ -30,8 +30,10 @@ transformer = ColumnTransformer([('One_hottie', hottie, features_cat)],
 
 # Apply transformation on a sample of X
 transformed_X = transformer.fit_transform(X.head())
-print(f'transformed X : {pd.DataFrame(transformed_X)}')
+print(f'transformed X :')
+print(pd.DataFrame(transformed_X))
 
 # Alternatively, use get_dummies for one-hot encoding
 transformed_new = pd.get_dummies(phones_csv[['Brand', "Storage ", "RAM ", "Price ($)"]])
-print(f'transformed new : {pd.DataFrame(transformed_new)}')
+print('transformed new : ')
+print(pd.DataFrame(transformed_new))
